@@ -1,4 +1,5 @@
 FROM golang:1.17-alpine
+
 RUN apk add --no-cache gcc musl-dev git
 RUN wget https://github.com/golangci/golangci-lint/releases/download/v1.44.0/golangci-lint-1.44.0-linux-amd64.tar.gz
 RUN tar -xzf golangci-lint-1.44.0-linux-amd64.tar.gz
