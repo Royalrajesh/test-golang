@@ -31,7 +31,6 @@ jobs:
           file: ./src/dockerfile
           # Note: tags has to be all lower-case
           tags: |
-          
             ghcr.io/Royalrajesh/golang_test/golang:alpine-${{ env.GITHUB_SHA_SHORT }}
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
