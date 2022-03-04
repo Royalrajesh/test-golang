@@ -31,10 +31,9 @@ jobs:
           file: ./src/dockerfile
           # Note: tags has to be all lower-case
           tags: |
-            if: "contains(github.event.head_commit.message, 'alpine')"
+          
             ghcr.io/Royalrajesh/golang_test/golang:alpine-${{ env.GITHUB_SHA_SHORT }}
             ghcr.io/Royalrajesh/golang_test/golang:alpine-latest
-            if: "contains(github.event.head_commit.message, 'alpine-fuzz')"
             ghcr.io/Royalrajesh/golang_test/golang:alpine-fuzz-${{ env.GITHUB_SHA_SHORT }}
             ghcr.io/Royalrajesh/golang_test/golang:alpine-fuzz-latest
           # build on feature branches, push only on main branch
