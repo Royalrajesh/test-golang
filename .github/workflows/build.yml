@@ -33,9 +33,6 @@ jobs:
           tags: |
           
             ghcr.io/Royalrajesh/golang_test/golang:alpine-${{ env.GITHUB_SHA_SHORT }}
-            ghcr.io/Royalrajesh/golang_test/golang:alpine-latest
-            ghcr.io/Royalrajesh/golang_test/golang:alpine-fuzz-${{ env.GITHUB_SHA_SHORT }}
-            ghcr.io/Royalrajesh/golang_test/golang:alpine-fuzz-latest
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
           
